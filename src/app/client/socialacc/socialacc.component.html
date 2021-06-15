@@ -1,0 +1,216 @@
+<div class="main-content">
+    <div class="modal fade"   id="noticeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-notice">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="nc-icon nc-simple-remove"></i>
+                </button>
+                <h5 class="modal-title" id="myModalLabel">Add Social Accounts</h5>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12 mr-auto ml-auto"  >
+                    <!--      Wizard container        -->
+                        <div class="card">
+                             <form action="" method="">
+                                <!--        You can switch " data-color="primary" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+                                <div class="card-body">
+                                    <div class="tab-content ">
+                                        <div class="tab-pane show active" >
+                                            <!-- <h5 class="info-text"> Let's start with the basic information (with validation)</h5> -->
+                                            <div class="row justify-content-center">
+                                                <div class="col-sm-10">
+                                                    <h5>Facebook &nbsp;&nbsp;<i style="font-size: 2rem;" (click)="Addmorefb()" class="fa fa-plus-circle" aria-hidden="true"></i></h5>  
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i
+                                                                            class="nc-icon nc-single-02"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder="Username"
+                                                                    name="firstname" (focus)="focus=true" (blur)="focus=false" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="nc-icon nc-key-25"></i></span>
+                                                                </div>
+                                                                <input type="password" placeholder="Password" class="form-control"
+                                                                    name="lastname" (focus)="focus1=true" (blur)="focus1=false"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>     
+                                                </div>
+                                                <div class="col-sm-10" *ngFor="let f of fb;i=index">
+                                                    <h5>Facebook &nbsp;&nbsp;<i style="font-size: 2rem;" (click)="Closefb(i)" class="fa fa-times-circle" aria-hidden="true"></i></h5>  
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i
+                                                                            class="nc-icon nc-single-02"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder="Username"
+                                                                    name="firstname" (focus)="focus=true" (blur)="focus=false" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="nc-icon nc-key-25"></i></span>
+                                                                </div>
+                                                                <input type="password" placeholder="Password" class="form-control"
+                                                                    name="lastname" (focus)="focus1=true" (blur)="focus1=false"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>     
+                                                </div>
+            
+                                                <div class="col-sm-10">
+                                                    <h5>Instagram  &nbsp;&nbsp; <i (click)="Addmoreinsta()" style="font-size: 2rem;" class="fa fa-plus-circle" aria-hidden="true"></i></h5>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i
+                                                                            class="nc-icon nc-single-02"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder="Username"
+                                                                    name="firstname" (focus)="focus=true" (blur)="focus=false" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="nc-icon nc-key-25"></i></span>
+                                                                </div>
+                                                                <input type="password" placeholder="Password" class="form-control"
+                                                                    name="lastname" (focus)="focus1=true" (blur)="focus1=false"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>     
+                                                </div>
+
+                                                <div class="col-sm-10" *ngFor="let in of insta;i=index">
+                                                    <h5>Instagram  &nbsp;&nbsp; <i style="font-size: 2rem;" (click)="Closeinsta(i)" class="fa fa-times-circle" aria-hidden="true"></i></h5>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i
+                                                                            class="nc-icon nc-single-02"></i></span>
+                                                                </div>
+                                                                <input type="text" class="form-control" placeholder="Username"
+                                                                    name="firstname" (focus)="focus=true" (blur)="focus=false" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group" >
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="nc-icon nc-key-25"></i></span>
+                                                                </div>
+                                                                <input type="password" placeholder="Password" class="form-control"
+                                                                    name="lastname" (focus)="focus1=true" (blur)="focus1=false"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>       
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-info btn-round" data-dismiss="modal">Add Accounts</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title"> Clients </h4>
+                </div>
+                <div class="card-body" style="overflow-x: scroll;">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="text-primary">
+                                <th class="text-center">
+                                    #
+                                </th>
+                                <th class="text-center">
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Role
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let u of clientList;let i=index">
+                                    <td class="text-center">
+                                        {{i+1}}
+                                    </td>
+                                    <!-- <td class="text-center">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" >
+                                                    <span class="form-check-sign"></span>
+                                                </label>
+                                            </div>
+                                        </td> -->
+                                        <td></td>
+                                    <td>
+                                        {{u.name}}
+                                    </td>
+                                    <td>
+                                        {{u.rolename}}
+                                    </td>
+                                    <td class="text-right">
+                                        <!-- <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm ">
+                                                <i class="fa fa-user"></i>
+                                            </button> -->
+                                        <button type="button" rel="tooltip" (click)="AddAccounts()" data-toggle="modal" data-target="#noticeModal"
+                                            class="btn btn-success btn-icon btn-md btn-round ">
+                                            <i class="fa fa-edit"></i>
+                                        </button>&nbsp;&nbsp;
+                                        <button type="button" data-toggle="modal" data-target="#myModal10" type="button"
+                                            (click)="deleteclient(u.uid)" rel="tooltip"
+                                            class="btn btn-danger btn-icon btn-md btn-round">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+    
+                                </tr>  
+                            </tbody >
+                          
+                        </table >
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- <div style="margin-top:3%;width:70%; margin-left:20%;" class="modal fade modal-primary" id="myEditModal" tabindex="-1"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-content modal-lg"> -->
+  
+  
+<!-- </div> 
+    </div> -->
+    
+    </div>
+</div>

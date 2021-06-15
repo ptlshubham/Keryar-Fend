@@ -1,0 +1,103 @@
+<div class="main-content buttons-with-margin " >
+    <div class="card" *ngIf="!notchat">
+        <div class="row">
+        
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"> Clients </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="text-primary">
+                                    <th class="text-center">
+                                        #
+                                    </th>
+                                    <th class="text-center">
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Role
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let u of clients;let i=index">
+                                        <td class="text-center">
+                                            {{i+1}}
+                                        </td>
+                                        <td>
+                                           {{u.name}}
+                                        </td>
+                                        <td>
+                                            {{u.rolename}}
+                                        </td>
+                                        <td class="text-right">
+                                            <!-- <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm ">
+                                                <i class="fa fa-user"></i>
+                                            </button> -->
+                                            <button type="button" rel="tooltip" (click)="OpenChat(u.uid ,u.name)" class="btn btn-success btn-icon btn-md btn-round ">
+                                                <i class="nc-icon nc-chat-33"></i></button>
+                                        </td>
+                                     
+                                    </tr>
+    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="card" *ngIf="notchat"   > 
+        <div class="row" >
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title"> {{client}} </h4>
+                    </div>
+                    <div class="card-body scroll" >
+                        <div class="row" *ngFor="let message of messages">
+                            <div class="col-md-10"  *ngIf="message.sender != userid"  style="background-color: rgb(233, 233, 229);border-radius: 20px; border-style: solid;border-width: 1px;padding:4px;border-color: rgb(233, 233, 229);margin-top: 4px;;margin-left: 20px;;">
+                               <span class="user_name" style="color:gray;font-size: 0.7rem;">{{ message.sendername }}</span><br>
+                              <span style="color:black;font-size: 1rem;">{{ message.message}}</span>
+                              <div class="time" style="color:gray;font-size: 0.5rem;margin-top: 3px;">{{message.createddate | date:'dd.MM hh:MM'}}</div>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10"  *ngIf="message.sender == userid"  style="color:#ffffff;background-color:#124244;border-radius:20px;border-style: solid;border-width: 1px;padding:4px;margin-top: 4px;;">
+                                <span class="user_name" style="color:gray;font-size: 0.7rem;">{{ uname }}</span><br>
+                                <span style="color:white ; font-size: 1rem;">{{ message.message }}</span>
+                              <div class="time" style="color:rgb(204, 209, 209);font-size: 0.5rem;margin-top: 3px;;">{{message.createddate | date:'dd.MM hh:MM'}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="row" >
+            <div style="height:10px;">
+            <div  class="row" >
+              <div class="col-md-10"  style="margin-top: -1%;">
+                  <input type="text" placeholder="Message" [(ngModel)]="message" style="height:2.5rem;border-radius: 30px;border-width: 1px;;border-style: solid;border-color: red;width: 100%;">
+              </div>
+              <div class="col-md-2" style="text-align: center; font-size: 1.8rem !important ; ">
+                  <i class="nc-icon nc-send" (click)="sendMessage()" ></i>
+              </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+            

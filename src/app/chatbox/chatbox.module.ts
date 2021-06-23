@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ChatboxComponent } from './chatbox.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
  const config: SocketIoConfig = { url: 'http://localhost:3001', options:{transport:['websocket']} };
 
 
@@ -13,6 +14,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
     CommonModule,
     FormsModule,
      SocketIoModule.forRoot(config),
+     NgxEmojiPickerModule.forRoot(),
     RouterModule.forChild([
       {
         path:'chatbox',

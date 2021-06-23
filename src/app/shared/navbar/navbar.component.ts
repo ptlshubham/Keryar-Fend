@@ -144,4 +144,8 @@ export class NavbarComponent implements OnInit{
         // console.log(this.location);
         return this.location.prepareExternalUrl(this.location.path());
     }
+    logout(){
+        localStorage.clear();
+        this.router.navigate(['pages/login'])
+    }
 }

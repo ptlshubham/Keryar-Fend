@@ -44,7 +44,7 @@
                                                         </div>
                                                     </div>     
                                                 </div>
-                                                <div class="col-sm-10" *ngFor="let f of fb;i=index">
+                                                <div class="col-sm-10" *ngFor="let f of fb;let i=index">
                                                     <h5>Facebook &nbsp;&nbsp;<i style="font-size: 2rem;" (click)="Closefb(i)" class="fa fa-times-circle" aria-hidden="true"></i></h5>  
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -94,7 +94,7 @@
                                                     </div>     
                                                 </div>
 
-                                                <div class="col-sm-10" *ngFor="let in of insta;i=index">
+                                                <div class="col-sm-10" *ngFor="let in of insta;let i=index">
                                                     <h5>Instagram  &nbsp;&nbsp; <i style="font-size: 2rem;" (click)="Closeinsta(i)" class="fa fa-times-circle" aria-hidden="true"></i></h5>
                                                     <div class="row">
                                                         <div class="col-sm-6">

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
+
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,6 +19,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { NgChatModule  } from 'ng-chat';
+import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
  const config: SocketIoConfig = { url: 'http://localhost:3001', options:{} };
 
 
@@ -39,7 +40,8 @@ import { NgChatModule  } from 'ng-chat';
         SidebarModule,
         NavbarModule,
         FooterModule,
-        FixedPluginModule
+        FixedPluginModule,
+        NgxEmojiPickerModule.forRoot()
     ],
     declarations: [
         AppComponent,

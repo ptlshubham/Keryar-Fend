@@ -8,6 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { TagInputModule } from 'ngx-chips';
 import { SocialaccComponent } from './socialacc/socialacc.component';
+import { ClientService } from './client.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -29,10 +32,15 @@ import { SocialaccComponent } from './socialacc/socialacc.component';
       }
     ]),
     FormsModule,
+    HttpModule,
     TagInputModule,
     JwBootstrapSwitchNg2Module,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
   ],
   declarations: [ClientComponent, ClientDetailsComponent, SocialaccComponent],
+  providers: [
+    ClientService
+  ],
 })
 export class ClientModule { }

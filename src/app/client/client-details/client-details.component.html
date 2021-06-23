@@ -1,15 +1,20 @@
 <div class="main-content">
     <div class="container">
-        <button class="btn btn-success btn-md btn-round" data-toggle="modal" data-target="#myEditModal" (click)="addclient()">Add Client
-            &nbsp; 
-            <!-- <i class="fa fa-user-plus" aria-hidden="true" style="font-size: 1.2rem;"></i> -->
-        </button>
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <button class="btn btn-success btn-md btn-round" data-toggle="modal" data-target="#myEditModal"
+                    (click)="addclient()">Add Client
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
 
     <!-- <div style="margin-top:3%;width:70%; margin-left:20%;" class="modal fade modal-primary" id="myEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> -->
-        <!-- <div class="modal-dialog modal-lg"> -->
-    <div class="col-md-12 mr-auto ml-auto" *ngIf="addclientflag" >
+    <!-- <div class="modal-dialog modal-lg"> -->
+    <div class="col-md-12 mr-auto ml-auto" *ngIf="addclientflag">
         <!--      Wizard container        -->
         <div class="card">
             <div class="card">
@@ -17,63 +22,79 @@
                     <!--        You can switch " data-color="primary" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
                     <div class="card-header text-center">
                         <h3 class="card-title">
-                           Add Client
+                            Add Client
                         </h3>
                     </div>
                     <div class="card-body">
                         <div class="tab-content ">
-                            <div class="tab-pane show active" >
+                            <div class="tab-pane show active">
                                 <!-- <h5 class="info-text"> Let's start with the basic information (with validation)</h5> -->
                                 <div class="row justify-content-center">
-                                      <div class="col-md-4 col-sm-4">
+                                    <div class="col-md-4 col-sm-4">
                                         <h4 class="card-title">Profile Picture</h4>
-                                        <div data-provides="fileinput" class="fileinput fileinput-new text-center" style="margin-left: 5%;">
-                                          <div class="fileinput-new thumbnail img-circle">
-                                              <img src="./assets/img/placeholder.jpg" alt="...">
-                                          </div>
-                                          <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
-                                          <div>
-                                              <span class="btn btn-round btn-rose btn-file"><span class="fileinput-new">Add Photo</span>
-                                                <span class="fileinput-exists"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span><input type="file" name="..."></span>
-                                                <a href="javascript:void(0)" data-dismiss="fileinput" class="btn btn-danger btn-round fileinput-exists"><i class="fa fa-times"></i> </a></div>
+                                        <div data-provides="fileinput" class="fileinput fileinput-new text-center"
+                                            style="margin-left: 5%;">
+                                            <div class="fileinput-new thumbnail img-circle">
+                                                <img src="./assets/img/placeholder.jpg" alt="...">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+                                            <div>
+                                                <span class="btn btn-round btn-rose btn-file"><span
+                                                        class="fileinput-new">Add Photo</span>
+                                                    <span class="fileinput-exists"><i class="fa fa-pencil-square-o"
+                                                            aria-hidden="true"></i></span><input type="file"
+                                                        name="..."></span>
+                                                <a href="javascript:void(0)" data-dismiss="fileinput"
+                                                    class="btn btn-danger btn-round fileinput-exists"><i
+                                                        class="fa fa-times"></i> </a>
+                                            </div>
                                         </div>
-                                      </div>
+                                    </div>
                                     <div class="col-sm-6">
-                                        <div class="input-group" >
+                                        <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i
                                                         class="nc-icon nc-single-02"></i></span>
                                             </div>
                                             <input type="text" class="form-control" placeholder="Name (required)"
-                                                name="firstname" (focus)="focus=true" (blur)="focus=false" [(ngModel)]="client.name" />
+                                                name="firstname" (focus)="focus=true" (blur)="focus=false"
+                                                [(ngModel)]="client.name" />
                                         </div>
-                                        <div class="input-group" >
+                                        <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="nc-icon nc-key-25"></i></span>
                                             </div>
-                                            <input type="password" placeholder="Password (required)" class="form-control"
-                                                name="lastname" (focus)="focus1=true" (blur)="focus1=false" [(ngModel)]="client.password"/>
+                                            <input type="password" placeholder="Password (required)"
+                                                class="form-control" name="lastname" (focus)="focus1=true"
+                                                (blur)="focus1=false" [(ngModel)]="client.password" />
                                         </div>
-                                        <div class="input-group" >
+                                        <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="nc-icon nc-key-25 nc-circle-10"></i></span>
+                                                <span class="input-group-text"><i
+                                                        class="nc-icon nc-key-25 nc-circle-10"></i></span>
                                             </div>
-                                            <input type="password" placeholder="Re-Enter Password (required)" class="form-control"
-                                                name="lastname" (focus)="focus1=true" (blur)="focus1=false" [(ngModel)]="client.repass" (mouseleave)="ComparePass(client.repass , client.password)" />
+                                            <input type="password" placeholder="Re-Enter Password (required)"
+                                                class="form-control" name="lastname" (focus)="focus1=true"
+                                                (blur)="focus1=false" [(ngModel)]="client.repass"
+                                                (mouseleave)="ComparePass(client.repass , client.password)" />
                                         </div>
-                                        <div class="input-group" >
+                                        <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                                                <span class="input-group-text"><i class="fa fa-mobile"
+                                                        aria-hidden="true"></i></span>
                                             </div>
                                             <input type="text" placeholder="Mobile (required)" class="form-control"
-                                                name="lastname" (focus)="focus1=true" (blur)="focus1=false" [(ngModel)]="client.mobile" />
+                                                name="lastname" (focus)="focus1=true" (blur)="focus1=false"
+                                                [(ngModel)]="client.mobile" />
                                         </div>
-                                        <div class="input-group" >
+                                        <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                                <span class="input-group-text"><i class="fa fa-envelope"
+                                                        aria-hidden="true"></i></span>
                                             </div>
                                             <input type="email" placeholder="Email (required)" class="form-control"
-                                                name="email" (focus)="focus2=true" (blur)="focus2=false" [(ngModel)]="client.email" />
+                                                name="email" (focus)="focus2=true" (blur)="focus2=false"
+                                                [(ngModel)]="client.email" />
                                         </div>
                                     </div>
                                 </div>
@@ -82,12 +103,12 @@
                     </div>
                     <div class="card-footer">
                         <div class="pull-right">
-                          
+
                             <input type='button' class='btn btn-finish btn-fill btn-rose btn-wd' name='finish'
                                 value='Finish' (click)="AddNewClient(client)" />
                         </div>
                         <div class="pull-left">
-                           
+
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -101,41 +122,41 @@
             </div>
         </div> -->
     </div>
-        <!-- </div>
+    <!-- </div>
     
     </div>  -->
 
 
-<div class="row">
+    <div class="row">
 
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title"> Clients </h4>
-            </div>
-            <div class="card-body" style="overflow-x: scroll;">
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead class="text-primary">
-                            <th class="text-center">
-                                #
-                            </th>
-                            <th class="text-center">
-                            </th>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                Role
-                            </th>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let u of clientList;let i=index">
-                                <td class="text-center">
-                                    {{i+1}}
-                                </td>
-                                <td></td>
-                                <!-- <td class="text-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title"> Clients </h4>
+                </div>
+                <div class="card-body" style="overflow-x: scroll;">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="text-primary">
+                                <th class="text-center">
+                                    #
+                                </th>
+                                <th class="text-center">
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Role
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let u of clientList;let i=index">
+                                    <td class="text-center">
+                                        {{i+1}}
+                                    </td>
+                                    <td></td>
+                                    <!-- <td class="text-center">
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="checkbox" >
@@ -143,60 +164,114 @@
                                             </label>
                                         </div>
                                     </td> -->
-                                <td>
-                                    {{u.name}}
-                                </td>
-                                <td>
-                                    {{u.rolename}}
-                                </td>
-                                <td class="text-right">
-                                    <!-- <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm ">
+                                    <td>
+                                        {{u.name}}
+                                    </td>
+                                    <td>
+                                        {{u.rolename}}
+                                    </td>
+                                    <td class="text-right">
+                                        <!-- <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm ">
                                             <i class="fa fa-user"></i>
                                         </button> -->
-                                    <button type="button" rel="tooltip"
-                                        class="btn btn-success btn-icon btn-md btn-round ">
-                                        <i class="fa fa-edit"></i>
-                                    </button>&nbsp;&nbsp;
-                                    <button type="button" data-toggle="modal" data-target="#myModal10" type="button"
-                                        (click)="deleteclient(u.uid)" rel="tooltip"
-                                        class="btn btn-danger btn-icon btn-md btn-round">
-                                        <i class="fa fa-trash"></i>
-                                    </button>
-                                </td>
+                                        <button type="button" rel="tooltip"
+                                            class="btn btn-success btn-icon btn-md btn-round " data-toggle="modal"
+                                            data-target="#noticeModal1" >
+                                            <i class="fa fa-edit" (click)="editClients(u)"></i>
+                                        </button>&nbsp;&nbsp;
+                                        <button type="button" data-toggle="modal" data-target="#myModal10" type="button"
+                                            (click)="deleteclient(u.uid)" rel="tooltip"
+                                            class="btn btn-danger btn-icon btn-md btn-round">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                            </tr>
-
-
-                        </tbody>
-                    </table>
+    </div>
+     <!-- Delete Confirmation Dialog Box Start -->
+    <div class="modal fade modal-primary " id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <div class="modal-profile ml-auto mr-auto">
+                        <i class="nc-icon nc-bulb-63"></i>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Always have an access to your profile</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="left-side mx-0">
+                        <button type="button" class="btn btn-link btn-link" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="right-side mx-0">
+                        <button type="button" class="btn btn-link btn-link" data-dismiss="modal"
+                            (click)="confirm()">Confirm</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Delete Confirmation Dialog Box Ended -->
 
-</div>
-<div class="modal fade modal-primary " id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header justify-content-center">
-                <div class="modal-profile ml-auto mr-auto">
-                    <i class="nc-icon nc-bulb-63"></i>
+    
+    <div class="modal fade" id="noticeModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-notice">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="nc-icon nc-simple-remove"></i>
+                    </button>
+                    <h5 class="modal-title" id="myModalLabel">Update Clients</h5>
                 </div>
-            </div>
-            <div class="modal-body">
-                <p>Always have an access to your profile</p>
-            </div>
-            <div class="modal-footer">
-                <div class="left-side mx-0">
-                    <button type="button" class="btn btn-link btn-link" data-dismiss="modal">Close</button>
+
+                <div class="modal-body">
+                    <div class="instruction">
+                        <form class="form-horizontal" name="clientsRegForm" #clientsRegForm="ngForm">
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Update Name" [(ngModel)]="editclient.name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Role</label>
+                                <div class="col-sm-10">
+                                    <div class="dropdown form-group">
+                                        <button class="dropdown-toggle btn btn-primary btn-round btn-block" type="button"
+                                            name="dropdownMenuButton" id="dropdownMenuButton" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">{{selectedRole}}
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <div class="dropdown-header">Select Position</div>
+                                            <div *ngFor="let ro of roles">
+                                                <a class="dropdown-item" (click)="selectRole(ro)">{{ro.name}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="divider"></div>
-                <div class="right-side mx-0">
-                    <button type="button" class="btn btn-link btn-link" data-dismiss="modal"
-                        (click)="confirm()">Confirm</button>
+
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-info btn-round" data-dismiss="modal"
+                      (click)="updateClientDetails(editclient)" >Update</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>

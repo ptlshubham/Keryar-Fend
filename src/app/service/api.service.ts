@@ -42,6 +42,7 @@ export class ApiService {
 
   public static updateClientsURL: string = ApiService.HOST_URL + '/admin/UpdateClientsDetails';
   public static saveEmployeeURL: string = ApiService.HOST_URL + '/admin/AddNewClient';
+  public static saveSocialAcccountsURL: string = ApiService.HOST_URL + '/admin/AddSocialAccounts';
 
 
   Login(data) {

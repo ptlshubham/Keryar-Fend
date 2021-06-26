@@ -4,7 +4,9 @@
             <div class="col-md-9"></div>
             <div class="col-md-3">
                 <button class="btn btn-success btn-md btn-round" data-toggle="modal" data-target="#myEditModal"
-                    (click)="addEmployee()">Add Employee <i class="fa fa-plus" aria-hidden="true"></i>
+                    (click)="addEmployee()">Add Employee 
+                    <i class="fa fa-plus" aria-hidden="true" *ngIf="!addemployeeflag"></i>
+                    <i class="fa fa-minus" aria-hidden="true" *ngIf="addemployeeflag"></i>
                 </button>
             </div>
         </div>

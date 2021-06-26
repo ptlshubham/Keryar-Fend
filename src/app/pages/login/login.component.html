@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
   <div class="container">
-    <div class="navbar-wrapper">
+    <!-- <div class="navbar-wrapper">
       <div class="navbar-toggle" (click)="sidebarToggle()">
         <button type="button" class="navbar-toggler">
           <span class="navbar-toggler-bar bar1"></span>
@@ -9,18 +9,18 @@
         </button>
       </div>
       <a class="navbar-brand" routerLinkActive="active" [routerLink]="['/dashboard']">Paper Dashboard PRO Angular</a>
-    </div>
+    </div> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+    <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <!-- <a routerLinkActive="active" [routerLink]="['/dashboard']" class="nav-link">
+          <a routerLinkActive="active" [routerLink]="['/dashboard']" class="nav-link">
             <i class="nc-icon nc-layout-11"></i> Dashboard
-          </a> -->
+          </a>
         </li>
         <li class="nav-item ">
           <a routerLinkActive="active" [routerLink]="['/pages/register']" class="nav-link">
@@ -43,7 +43,7 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
 
@@ -77,8 +77,7 @@
                   </div>
                   <input type="password" [ngModelOptions]="{standalone: true}" placeholder="Password" class="form-control" (focus)="focus1=true" (blur)="focus1=false" [(ngModel)]="password"> 
                 </div>
-                <br/>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <div class="form-check">
                     <label class="form-check-label">
                       <input class="form-check-input" type="checkbox" value="" checked="">
@@ -86,10 +85,10 @@
                       Subscribe to newsletter
                     </label>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div class="card-footer ">
-                <a href="javascript:void(0)" (click)="Login()"   class="btn btn-warning btn-round btn-block mb-3">Get Started</a>
+                <a (click)="Login()"   class="btn btn-warning btn-round btn-block mb-3">Login</a>
               </div>
             </div>
           </form>
@@ -99,7 +98,7 @@
     <footer class="footer footer-black  footer-white ">
       <div class="container">
         <div class="row">
-          <nav class="footer-nav">
+          <!-- <nav class="footer-nav">
             <ul>
               <li>
                 <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
@@ -111,10 +110,10 @@
                 <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
               </li>
             </ul>
-          </nav>
+          </nav> -->
           <div class="credits ml-auto">
             <span class="copyright">
-              &copy; {{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim
+              &copy; {{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Keryar
             </span>
           </div>
         </div>
